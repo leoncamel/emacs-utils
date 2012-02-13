@@ -7,7 +7,7 @@
 ;; URL: http://www.stat.cmu.edu/~genovese/emacs/win-switch/
 
 ;; Version: 1.0.3
-;; Update#: 14
+;; Update#: 15
 ;; Created:      Wed 28 Jul 2011 at 00:27 EDT
 ;; Last-Updated: Tue 17 Jan 2012 at 15:58 EST
 ;; By: Christopher R. Genovese
@@ -736,6 +736,7 @@ keys with the same prefix."
 
 ;; (@* "Internal Configuration Data")
 
+;;;###autoload
 (defvar win-switch-commands
   '((win-switch-up-keys                   . win-switch-up)
     (win-switch-down-keys                 . win-switch-down)
@@ -755,6 +756,7 @@ keys with the same prefix."
     (win-switch-emergency-exit-keys       . win-switch-emergency-exit))
   "Associates pre-defined key lists to window-switching mode commands.")
 
+;;;###autoload
 (defvar win-switch-once-commands
   '((win-switch-once-double-next-keys     . win-switch-double-next-window)
     (win-switch-once-double-prev-keys     . win-switch-double-previous-window))
@@ -784,6 +786,7 @@ changing this variable directly. If you do change this keymap
 directly, using `define-key' for instance, be very careful to
 leave an exit key available")
 
+;;;###autoload
 (defvar win-switch-once-map
   (let ((map (make-sparse-keymap "Window Switching")))
     (dolist (cmdpair (concatenate 'list
